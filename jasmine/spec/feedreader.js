@@ -104,12 +104,15 @@ $(function() {
          let actualFeed;
          let nextFeed;
          beforeEach(function (done) {
+           $('.feed').empty();
            loadFeed(0, function () {
              actualFeed = document.querySelector('.feed').innerHTML;
-           });
-           loadFeed(1, function () {
+
+             loadFeed(1, function () {
              nextFeed = document.querySelector('.feed').innerHTML;
-            done();
+
+             done();
+             });
            });
          });
 
